@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linktree</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="img-container">
+
+      <div class="share-button">
+        <a href="https://drive.google.com/file/d/1BzE92Az3FgoAkeBvA5szOb1LCTTL7y2g/view?usp=sharing" target="_blank"> VIEW MY CV..</a>
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </div>
+      <br>
+
+      <h1> MASHAEL ALSHAMMARI</h1>
+      <br>
+
+      <div id="readMoreContent" class="reading-animation">
+        WEB DEVELOPER | WRITER 
+      </div>
+
+    </div>
+
+    <!-- Custom Audio Play Button -->
+    <div class="link-card">
+      <i class="fa-solid fa-volume-high"></i>
+      <p> Listen to My introduction </p>
+      <button id="playAudio" class="audio-button">Play Audio</button>
+      <audio id="audioPlayer">
+        <source src="myinroduction.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Link Cards (Example for other links like Projects, GitHub, etc.) -->
+    <a href="" class="link-card">
+      <i class="fa-solid fa-laptop-code"></i>
+      <p> MY PROJECTS</p>
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </a>
+    <a href="https://itqueen.gumroad.com/" class="link-card">
+      <i class="fa-solid fa-book"></i>
+      <p> MY DIGITAL LIBRARY</p>
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </a>
+    <a href="https://github.com/itqiuen" class="link-card">
+      <i class="fa-brands fa-github"></i>
+      <p> GITHUB </p>
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/itmashael/" class="link-card">
+      <i class="fa-brands fa-linkedin-in"></i>
+      <p> LINKEDIN </p>
+      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    </a>
+    
+  </div>
+
+  <script>
+    // Get the audio player and play button
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playButton = document.getElementById('playAudio');
+
+    // Add an event listener to the button to play the audio
+    playButton.addEventListener('click', function () {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playButton.textContent = 'Pause Audio'; // Change button text to 'Pause'
+      } else {
+        audioPlayer.pause();
+        playButton.textContent = 'Play Audio'; // Change button text to 'Play'
+      }
+    });
+  </script>
+
+</body>
+
+</html>
